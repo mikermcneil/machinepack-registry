@@ -25,7 +25,8 @@ module.exports = {
         identity: 'do-stuff',
         friendlyName: 'Do stuff and things',
         variableName: 'doStuff',
-        description: 'Do stuff given other stuff.'
+        description: 'Do stuff given other stuff.',
+        rawJsonStr: '{"identity": "do-stuff", etc.}'
       }
     }
   },
@@ -50,6 +51,9 @@ module.exports = {
         catch (e){
           return exits.error(e);
         }
+
+        // Expose raw JSON string in case additional information needs to be parsed.
+        machine.rawJsonStr = resp.body;
 
         return exits.success(machine);
       }

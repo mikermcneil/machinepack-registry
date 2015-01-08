@@ -24,9 +24,14 @@ module.exports = {
         extendedDescription: '...',
         npmPackageName: 'machinepack-whatever',
         version: '1.2.3',
+        latestVersionPublishedAt: '2014-12-28T07:01:30.069Z',
         nodeMachineUrl: 'http://node-machine.org/machinepack-whatever',
         githubUrl: 'https://github.com/mikermcneil/machinepack-whatever',
         npmUrl: 'http://npmjs.org/package/machinepack-whatever',
+        contributors: [{
+          name: 'Marty McFly',
+          email: 'marty@dolorian-tardis.edu'
+        }],
         machines: [{
           identity: 'do-stuff',
           friendlyName: 'Do stuff and things',
