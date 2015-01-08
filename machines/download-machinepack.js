@@ -98,18 +98,18 @@ module.exports = {
 
                 // Set present working directory to the `machinepackPath`
                 // (remembering the previous cwd for later)
-                var cwd = process.cwd();
-                process.chdir(machinepackPath);
+                // var cwd = process.cwd();
+                // process.chdir(machinepackPath);
 
-                console.log('Installing NPM dependencies for %s...',machinepack.identity);
-                enpeem.install({
-                  dependencies: [],
-                  loglevel: 'silent'
-                }, function (err){
-                  if (err) return exits.error(err);
+                // console.log('Installing NPM dependencies for %s...',machinepack.identity);
+                // enpeem.install({
+                //   dependencies: [],
+                //   loglevel: 'silent'
+                // }, function (err){
+                //   if (err) return exits.error(err);
 
-                  // Return to previous present working directory
-                  process.chdir(cwd);
+                //   // Return to previous present working directory
+                //   process.chdir(cwd);
 
                   // Determine the local, temporary path to this machinepack's "machines/"
                   // directory on disk.
@@ -154,7 +154,7 @@ module.exports = {
                   });
 
 
-                });
+                // }); </enpeem.install()>
               }
             });
 
