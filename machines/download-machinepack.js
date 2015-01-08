@@ -41,6 +41,7 @@ module.exports = {
     }
   },
   fn: function(inputs, exits) {
+    var Filesystem = require('machinepack-fs');
     var util = require('util');
     var path = require('path');
     var _ = require('lodash');
@@ -75,65 +76,88 @@ module.exports = {
           error: exits.error,
           success: function (machinepackPath){
 
-            // Set present working directory to the `machinepackPath`
-            // (remembering the previous cwd for later)
-            var cwd = process.cwd();
-            process.chdir(machinepackPath);
+            // Read JSON file located at source path on disk into a JavaScript object or array.
+            Filesystem.readJson({
+              source: path.resolve(machinepackPath, 'package.json'),
+            }).exec({
+              // An unexpected error occurred.
+              error: exits.error,
+              success: function (packageJsonData){
 
-            console.log('Installing NPM dependencies for %s...',machinepack.identity);
-            enpeem.install({
-              dependencies: [],
-              loglevel: 'silent'
-            }, function (err){
-              if (err) return exits.error(err);
+                // Load and parse package.json data
+                // Parse machinepack metadata from its package.json object.
+                var metadata = Machines.parseMachinepackMetadata({
+                  json: packageJsonData,
+                }).execSync();
 
-              // Return to previous present working directory
-              process.chdir(cwd);
+                // Convert dependencies back into an object
+                machinepack.dependencies = _.reduce(metadata.dependencies, function (memo, dependency){
+                  memo[dependency.name] = dependency.semverRange;
+                  return memo;
+                }, {});
 
-              // Determine the local, temporary path to this machinepack's "machines/"
-              // directory on disk.
-              Machines.getMachinesDir({
-                dir: machinepackPath
-              }).exec({
-                error: exits.error,
-                success: function (machinesDirPath){
+                // Set present working directory to the `machinepackPath`
+                // (remembering the previous cwd for later)
+                var cwd = process.cwd();
+                process.chdir(machinepackPath);
 
-                  // Now load the JavaScript code string for each of this pack's machines.
-                  var machinesAsJs = [];
-                  async.each(machinepack.machines, function (machine, next){
+                console.log('Installing NPM dependencies for %s...',machinepack.identity);
+                enpeem.install({
+                  dependencies: [],
+                  loglevel: 'silent'
+                }, function (err){
+                  if (err) return exits.error(err);
 
-                    var machineDef = require(path.resolve(machinesDirPath, machine.identity+'.js'));
-                    machinesAsJs.push({
-                      identity: machine.identity,
-                      definition: stringifyRuntimeMachine(machineDef)
-                    });
-                    next();
+                  // Return to previous present working directory
+                  process.chdir(cwd);
 
-                    // Machines.readMachineFile({
-                    //   source: path.resolve(machinesDirPath, machine.identity+'.js')
-                    // }).exec({
-                    //   error: next,
-                    //   success: function (js){
-                    //     machinesAsJs.push({
-                    //       identity: machine.identity,
-                    //       code: js
-                    //     });
-                    //     next();
-                    //   }
-                    // });
-                  }, function afterwards(err){
-                    if (err) return exits.error(err);
+                  // Determine the local, temporary path to this machinepack's "machines/"
+                  // directory on disk.
+                  Machines.getMachinesDir({
+                    dir: machinepackPath
+                  }).exec({
+                    error: exits.error,
+                    success: function (machinesDirPath){
 
-                    // Rebuild the `machines` array using the code strings
-                    machinepack.machines = machinesAsJs;
+                      // Now load the JavaScript code string for each of this pack's machines.
+                      var expandedMachineDefs = [];
+                      async.each(machinepack.machines, function (machine, next){
 
-                    return exits.success(machinepack);
+                        var machineDef = require(path.resolve(machinesDirPath, machine.identity+'.js'));
+                        expandedMachineDefs.push({
+                          identity: machine.identity,
+                          definition: stringifyRuntimeMachine(machineDef)
+                        });
+                        next();
+
+                        // Machines.readMachineFile({
+                        //   source: path.resolve(machinesDirPath, machine.identity+'.js')
+                        // }).exec({
+                        //   error: next,
+                        //   success: function (js){
+                        //     expandedMachineDefs.push({
+                        //       identity: machine.identity,
+                        //       code: js
+                        //     });
+                        //     next();
+                        //   }
+                        // });
+                      }, function afterwards(err){
+                        if (err) return exits.error(err);
+
+                        // Rebuild the `machines` array using the code strings
+                        machinepack.machines = expandedMachineDefs;
+
+                        return exits.success(machinepack);
+                      });
+                    }
                   });
-                }
-              });
 
 
+                });
+              }
             });
+
           }
         });
       }

@@ -20,7 +20,8 @@
     "machinepack-npm": "^0.3.1",
     "lodash": "^2.4.1",
     "machinepack-machines": "^1.1.1",
-    "async": "^0.9.0"
+    "async": "^0.9.0",
+    "machinepack-fs": "^1.6.2"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
