@@ -21,6 +21,12 @@ module.exports = {
         friendlyName: 'Whatever (you know)',
         variableName: 'Whatever',
         description: 'Node.js utilities for working with whatever.',
+        extendedDescription: '...',
+        npmPackageName: 'machinepack-whatever',
+        version: '1.2.3',
+        nodeMachineUrl: 'http://node-machine.org/machinepack-whatever',
+        githubUrl: 'https://github.com/mikermcneil/machinepack-whatever',
+        npmUrl: 'http://npmjs.org/package/machinepack-whatever',
         machines: [{
           identity: 'do-stuff',
           friendlyName: 'Do stuff and things',
