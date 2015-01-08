@@ -25,7 +25,8 @@
     "machineDir": "machines/",
     "machines": [
       "list-machinepacks",
-      "get-machinepack-details"
+      "get-machine-info",
+      "get-machinepack-info"
     ]
   }
 }

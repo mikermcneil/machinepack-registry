@@ -1,10 +1,10 @@
 module.exports = {
-  friendlyName: 'Get machinepack details',
+  friendlyName: 'Get machinepack info',
   description: 'Get metadata for the specified machinepack, including a list of its machines.',
   extendedDescription: '',
   inputs: {
     machinepack: {
-      description: 'The identity of the machinepack',
+      description: 'The identity of the machinepack to look up.',
       example: 'machinepack-whatever',
       required: true
     }
