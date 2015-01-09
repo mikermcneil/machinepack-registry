@@ -1,18 +1,18 @@
 ![](http://node-machine.org/images/machine-anthropomorph-for-white-bg.png)
 
-# machinepack-nodemachineorg
+# machinepack-registry
 
 Node.js API wrapper for the public machine registry on node-machine.org.
 
 ### Installation
 
 ```sh
-$ npm install machinepack-nodemachineorg
+$ npm install machinepack-registry
 ```
 
 ### Usage
 
-For the latest usage documentation and status of this module, see [http://node-machine.org/machinepack-nodemachineorg](http://node-machine.org/machinepack-nodemachineorg).
+For the latest usage documentation and status of this module, see [http://node-machine.org/machinepack-registry](http://node-machine.org/machinepack-registry).
 
 ### About
 
@@ -21,5 +21,5 @@ Documentation pages for the machines contained in this module are automatically 
 
 ### License
 
-MIT &copy; 2015 contributors
+MIT &copy; 2015 Mike McNeil & contributors
 
