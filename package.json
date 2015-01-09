@@ -26,6 +26,9 @@
   "devDependencies": {
     "mocha": "^2.1.0"
   },
+  "repository": {
+    "url": "https://github.com/mikermcneil/machinepack-registry"
+  },
   "machinepack": {
     "friendlyName": "Machine Registry",
     "machineDir": "machines/",
