@@ -7,6 +7,10 @@ module.exports = {
       description: 'The identity of the machinepack to look up.',
       example: 'machinepack-whatever',
       required: true
+    },
+    registry: {
+      description: 'The base URL of the machine registry to use (defaults to the public registry at http://node-machine.org)',
+      example: 'http://node-machine.org'
     }
   },
   defaultExit: 'success',
@@ -51,7 +55,7 @@ module.exports = {
     var Npm = require('machinepack-npm');
     var Machines = require('machinepack-machines');
 
-    var registryBaseUrl = 'http://node-machine.org';
+    var registryBaseUrl = inputs.registry || 'http://node-machine.org';
 
     // Look up machinepack, including list of machines
     Http.sendHttpRequest({
