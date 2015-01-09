@@ -11,7 +11,7 @@
     "machines",
     "machinepack"
   ],
-  "author": "",
+  "author": "Mike McNeil <michael.r.mcneil@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "machine": "^1.1.0",
