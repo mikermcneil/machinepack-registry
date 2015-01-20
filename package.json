@@ -27,7 +27,7 @@
     "mocha": "^2.1.0"
   },
   "repository": {
-    "url": "https://github.com/mikermcneil/machinepack-registry"
+    "url": "git://github.com/mikermcneil/machinepack-registry.git"
   },
   "machinepack": {
     "friendlyName": "Machine Registry",
