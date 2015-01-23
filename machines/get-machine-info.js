@@ -30,6 +30,7 @@ module.exports = {
         friendlyName: 'Do stuff and things',
         variableName: 'doStuff',
         description: 'Do stuff given other stuff.',
+        fn: 'some stringified function',
         rawJsonStr: '{"identity": "do-stuff", etc.}'
       }
     }

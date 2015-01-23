@@ -21,21 +21,31 @@ module.exports = {
     success: {
       description: 'Done.',
       example: {
-        identity: 'machinepack-whatever',
-        friendlyName: 'Whatever (you know)',
-        variableName: 'Whatever',
-        description: 'Node.js utilities for working with whatever.',
-        extendedDescription: '...',
-        npmPackageName: 'machinepack-whatever',
-        version: '1.2.3',
-        latestVersionPublishedAt: '2014-12-28T07:01:30.069Z',
-        nodeMachineUrl: 'http://node-machine.org/machinepack-whatever',
-        githubUrl: 'https://github.com/mikermcneil/machinepack-whatever',
-        npmUrl: 'http://npmjs.org/package/machinepack-whatever',
+        npmPackageName: 'machinepack-facebook',
+        identity: 'machinepack-facebook',
+        friendlyName: 'Facebook',
+        variableName: 'Facebook',
+        description: 'asg',
+        version: '0.1.1',
+        keywords: ['machine'],
+        latestVersionPublishedAt: '2015-01-19T22:26:54.588Z',
+        author: {
+          name: 'Marty McFly'
+        },
+        nodeMachineUrl: 'http://node-machine.org/machinepack-foo',
+        npmUrl: 'http://npmjs.org/package/machinepack-foo',
+        sourceCodeUrl: 'https://github.com/baz/machinepack-foo',
+        githubUrl: 'https://github.com/baz/machinepack-foo',
+        machineDir: 'machines/',
         contributors: [{
-          name: 'Marty McFly',
-          email: 'marty@dolorian-tardis.edu'
+          name: 'Doc Brown',
+          email: 'doc@brown.com'
         }],
+        dependencies: [{
+          name: 'lodash',
+          semverRange: '^2.4.1'
+        }],
+        license: 'MIT',
         machines: [{
           identity: 'do-stuff',
           friendlyName: 'Do stuff and things',
