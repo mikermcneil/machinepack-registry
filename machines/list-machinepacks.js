@@ -20,6 +20,8 @@ module.exports = {
         friendlyName: 'Whatever (you know)',
         variableName: 'Whatever',
         description: 'Node.js utilities for working with whatever.',
+        version: 'v0.5.17',
+        numMachines: 8
       }]
     }
   },
