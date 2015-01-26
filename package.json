@@ -14,7 +14,7 @@
   "author": "Mike McNeil <michael.r.mcneil@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "machine": "^1.1.0",
+    "machine": "^2.0.5",
     "machinepack-http": "^1.0.1",
     "enpeem": "^1.0.0",
     "machinepack-npm": "^1.1.2",
