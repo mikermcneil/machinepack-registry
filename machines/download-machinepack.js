@@ -55,7 +55,7 @@ module.exports = {
     var Npm = require('machinepack-npm');
     var Machines = require('machinepack-machines');
 
-    var registryBaseUrl = inputs.registry || 'http://node-machine.org';
+    var registryBaseUrl = inputs.registry || 'http://www.node-machine.org';
 
     // Look up machinepack, including list of machines
     Http.sendHttpRequest({

@@ -39,7 +39,7 @@ module.exports = {
     var util = require('util');
     var Http = require('machinepack-http');
 
-    var registryBaseUrl = inputs.registry || 'http://node-machine.org';
+    var registryBaseUrl = inputs.registry || 'http://www.node-machine.org';
 
     // Look up machinepack, including list of machines
     Http.sendHttpRequest({

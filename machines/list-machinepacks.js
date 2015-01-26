@@ -26,7 +26,7 @@ module.exports = {
   fn: function(inputs, exits) {
     var Http = require('machinepack-http');
 
-    var registryBaseUrl = inputs.registry || 'http://node-machine.org';
+    var registryBaseUrl = inputs.registry || 'http://www.node-machine.org';
 
     // Look up list of machinepacks
     Http.sendHttpRequest({
