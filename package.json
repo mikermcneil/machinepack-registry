@@ -15,11 +15,11 @@
   "license": "MIT",
   "dependencies": {
     "machine": "^1.1.0",
-    "machinepack-http": "^0.2.3",
+    "machinepack-http": "^1.0.1",
     "enpeem": "^1.0.0",
-    "machinepack-npm": "^0.3.1",
+    "machinepack-npm": "^1.1.2",
     "lodash": "^2.4.1",
-    "machinepack-machines": "^1.1.1",
+    "machinepack-machines": "^2.0.3",
     "async": "^0.9.0",
     "machinepack-fs": "^1.6.2"
   },
