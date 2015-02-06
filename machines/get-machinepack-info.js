@@ -10,7 +10,8 @@ module.exports = {
     },
     registry: {
       description: 'The base URL of the machine registry to use (defaults to the public registry at http://node-machine.org)',
-      example: 'http://node-machine.org'
+      example: 'http://node-machine.org',
+      defaultsTo: 'http://www.node-machine.org'
     }
   },
   defaultExit: 'success',
@@ -57,11 +58,9 @@ module.exports = {
     var util = require('util');
     var Http = require('machinepack-http');
 
-    var registryBaseUrl = inputs.registry || 'http://www.node-machine.org';
-
     // Look up machinepack, including list of machines
     Http.sendHttpRequest({
-      baseUrl: registryBaseUrl,
+      baseUrl: inputs.registry || 'http://www.node-machine.org',
       url: util.format('/%s', inputs.machinepack)
     }).exec({
       error: exits.error,
