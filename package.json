@@ -35,8 +35,7 @@
     "machines": [
       "list-machinepacks",
       "get-machine-info",
-      "get-machinepack-info",
-      "download-machinepack"
+      "get-machinepack-info"
     ]
   }
 }
