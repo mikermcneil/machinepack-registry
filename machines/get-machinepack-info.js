@@ -29,9 +29,7 @@ module.exports = {
         version: '0.1.1',
         keywords: ['machine'],
         latestVersionPublishedAt: '2015-01-19T22:26:54.588Z',
-        author: {
-          name: 'Marty McFly'
-        },
+        author: 'Marty McFly <marty@mcfly.com>',
         nodeMachineUrl: 'http://node-machine.org/machinepack-foo',
         npmUrl: 'http://npmjs.org/package/machinepack-foo',
         sourceCodeUrl: 'https://github.com/baz/machinepack-foo',
