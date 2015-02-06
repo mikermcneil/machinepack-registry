@@ -8,5 +8,12 @@
       },
       "outcome": "success"
     },
+    {
+      "using": {
+        "machinepack": "machinepack-notarealpack",
+        "machine": "not-a-real-machine"
+      },
+      "outcome": "notFound"
+    }
   ]
 }
