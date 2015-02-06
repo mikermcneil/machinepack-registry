@@ -1,4 +1,15 @@
 {
   "machine": "list-machinepacks",
-  "expectations": []
+  "expectations": [
+    {
+      "using": {},
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "registry": "http://not-a-real-registry-or-even-a-real-website.com"
+      },
+      "outcome": "error"
+    }
+  ]
 }

@@ -1,4 +1,23 @@
 {
   "machine": "get-machinepack-info",
-  "expectations": []
+  "expectations": [
+    {
+      "using": {
+        "machinepack": "machinepack-npm"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "machinepack": "machinepack-notarealpack"
+      },
+      "outcome": "notFound"
+    },
+    {
+      "using": {
+        "registry": "http://not-a-real-registry-or-even-a-real-website.com"
+      },
+      "outcome": "error"
+    }
+  ]
 }

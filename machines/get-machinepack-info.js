@@ -19,6 +19,9 @@ module.exports = {
     error: {
       description: 'Unexpected error occurred.'
     },
+    notFound: {
+      description: 'No machinepack with specified identity found in registry.'
+    },
     success: {
       description: 'Done.',
       example: {
@@ -64,6 +67,7 @@ module.exports = {
       url: util.format('/%s', inputs.machinepack)
     }).exec({
       error: exits.error,
+      notFound: exits.notFound,
       success: function (resp){
 
         var machinepack;

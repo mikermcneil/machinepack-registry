@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "machine": "^2.0.5",
-    "machinepack-http": "^1.1.0",
+    "machinepack-http": "^2.0.1",
     "enpeem": "^1.0.0",
     "machinepack-npm": "^2.0.1",
     "lodash": "^2.4.1",

@@ -50,12 +50,7 @@ module.exports = {
       url: util.format('/%s/%s', inputs.machinepack, inputs.machine)
     }).exec({
       error: exits.error,
-      notOk: function (resp){
-        if (resp.status === 404){
-          return exits.notFound();
-        }
-        return exits.error();
-      },
+      notFound: exits.notFound,
       success: function (resp){
 
         var machine;
