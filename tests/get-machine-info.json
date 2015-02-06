@@ -1,4 +1,12 @@
 {
   "machine": "get-machine-info",
-  "expectations": []
+  "expectations": [
+    {
+      "using": {
+        "machinepack": "machinepack-npm",
+        "machine": "download-package"
+      },
+      "outcome": "success"
+    },
+  ]
 }

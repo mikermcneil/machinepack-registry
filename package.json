@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Node.js API wrapper for the public machine registry hosted at http://node-machine.org.",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha -b"
+    "test": "node ./node_modules/test-machinepack-mocha/testmachinepack-mocha.js"
   },
   "keywords": [
     "NodeMachine.org",
@@ -15,16 +15,16 @@
   "license": "MIT",
   "dependencies": {
     "machine": "^2.0.5",
-    "machinepack-http": "^1.0.1",
+    "machinepack-http": "^1.1.0",
     "enpeem": "^1.0.0",
-    "machinepack-npm": "^1.1.2",
+    "machinepack-npm": "^2.0.1",
     "lodash": "^2.4.1",
-    "machinepack-machines": "^2.0.3",
+    "machinepack-machines": "^3.0.1",
     "async": "^0.9.0",
     "machinepack-fs": "^1.6.2"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "test-machinepack-mocha": "^0.2.2"
   },
   "repository": {
     "url": "git://github.com/mikermcneil/machinepack-registry.git"
