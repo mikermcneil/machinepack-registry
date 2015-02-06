@@ -1,6 +1,6 @@
 {
   "name": "machinepack-registry",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "Node.js API wrapper for the public machine registry hosted at http://node-machine.org.",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha -b"
