@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Node.js API wrapper for the public machine registry hosted at http://node-machine.org.",
   "scripts": {
-    "test": "node ./node_modules/test-machinepack-mocha/testmachinepack-mocha.js"
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
   "keywords": [
     "NodeMachine.org",
