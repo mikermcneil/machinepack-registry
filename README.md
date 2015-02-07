@@ -1,10 +1,17 @@
-![](http://node-machine.org/images/machine-anthropomorph-for-white-bg.png)
-
-# machinepack-registry
+<h1>
+  <a href="http://node-machine.org/machinepack-registry"><img alt="node-machine logo" title="The Node-Machine Project" src="http://node-machine.org/images/machine-anthropomorph-for-white-bg.png" width="50" /></a>
+  machinepack-registry
+</h1>
 
 Node.js API wrapper for the public machine registry on node-machine.org.
 
-### Installation
+### [Browse machines](http://node-machine.org/machinepacks) &nbsp;  [FAQ](http://node-machine.org/implementing/FAQ)  &nbsp;  [Newsgroup](https://groups.google.com/forum/?hl=en#!forum/node-machine)
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/node-machine/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/mikermcneil/machinepack-registry.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-registry)
+
+
+## Installation [![NPM version](https://badge.fury.io/js/machinepack-registry.svg)](http://badge.fury.io/js/machinepack-registry)
 
 ```sh
 $ npm install machinepack-registry
