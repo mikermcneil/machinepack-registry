@@ -36,7 +36,7 @@ module.exports = {
         author: 'Marty McFly <marty@mcfly.com>',
         nodeMachineUrl: 'http://node-machine.org/machinepack-foo',
         npmUrl: 'http://npmjs.org/package/machinepack-foo',
-        sourceCodeUrl: 'https://github.com/baz/machinepack-foo',
+        sourceUrl: 'https://github.com/baz/machinepack-foo',
         githubUrl: 'https://github.com/baz/machinepack-foo',
         machineDir: 'machines/',
         contributors: [{
