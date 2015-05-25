@@ -7,7 +7,7 @@
     },
     {
       "using": {
-        "registry": "http://not-a-real-registry-or-even-a-real-website.com"
+        "registry": "http://google.com/not-a-real-registry-or-even-a-real-website"
       },
       "outcome": "error"
     }
