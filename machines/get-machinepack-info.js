@@ -2,6 +2,10 @@ module.exports = {
   friendlyName: 'Get machinepack info',
   description: 'Get metadata for the specified machinepack, including a list of its machines.',
   extendedDescription: '',
+
+  cacheable: true,
+
+
   inputs: {
     machinepack: {
       description: 'The identity of the machinepack to look up.',
@@ -14,7 +18,6 @@ module.exports = {
       defaultsTo: 'http://www.node-machine.org'
     }
   },
-  defaultExit: 'success',
   exits: {
     error: {
       description: 'Unexpected error occurred.'

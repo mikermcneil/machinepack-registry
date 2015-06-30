@@ -1,7 +1,11 @@
 module.exports = {
   friendlyName: 'List machinepacks',
   description: 'List machinepacks in the registry.',
-  extendedDescription: '',
+
+
+  cacheable: true,
+
+
   inputs: {
     registry: {
       description: 'The base URL of the machine registry to use (defaults to the public registry at http://node-machine.org)',
@@ -9,7 +13,6 @@ module.exports = {
       defaultsTo: 'http://www.node-machine.org'
     }
   },
-  defaultExit: 'success',
   exits: {
     error: {
       description: 'Unexpected error occurred.'
